@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Document</title>
 </head>
 <body>
 
-    <a href="mailto:andy.rivera9595@gmail.com?subject=probandoasunto&body=probando texto">
-        <button>enviar correo</button>
-    </a>
+    <form class="formulario" name="formulario-contacto">
+        <input class="input" type="text" name="nombre" id="nombre" placeholder="Su Nombre">
+
+        <input class="input" type="email" name="email" id="email" placeholder="Su correo">
+
+        <textarea class="input" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="escribe tu mensaje"></textarea>
+
+        <input id="enviarCorreo" type="submit" value="Enviar">
+    </form>
+
+
+
+    <script>
+
+        const btnEnvio = document.getElementById('enviarCorreo')
+        
+        
+        btnEnvio.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        window.location.href=`marlon_rivera95@hotmail.com?subject=Servicio%3A%3olicitar&body=Nombre%3A${nombre}%0ACorreo%3A${email}%0AMensaje%3A${mensaje}`;
+        });
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,17 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.formulario .input{
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 360px){
+    .formulario{
+        width: 90%;
+    }
+}
